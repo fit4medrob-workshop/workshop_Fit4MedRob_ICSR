@@ -166,25 +166,16 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding: 1.5rem 1rem;
   margin-top: 2rem;
-  gap: 1rem;
+  gap: 2rem;
   flex-wrap: wrap;
-  overflow-x: auto;
-  white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none; /* Nasconde la scrollbar su Firefox */
-}
-
-/* Nasconde la scrollbar su Chrome, Safari e nuovi Edge */
-.footer-greenbar::-webkit-scrollbar {
-  display: none;
 }
 
 .footer-greenbar img {
   height: 40px;
   width: auto;
-  max-width: 120px;
+  max-width: 140px;
   object-fit: contain;
   filter: brightness(0) invert(1);
   opacity: 0.9;
@@ -200,17 +191,27 @@ footer {
 /* Stile per mobile */
 @media (max-width: 768px) {
   .footer-greenbar {
-    justify-content: flex-start;
-    padding: 0.8rem 1rem;
-    gap: 1.5rem;
-    -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    gap: 1.5rem 1rem;
+    padding: 1.2rem 0.5rem;
   }
   
   .footer-greenbar img {
     height: 35px;
-    max-width: 100px;
-    scroll-snap-align: start;
-    flex: 0 0 auto;
+    max-width: 120px;
+    margin: 0 auto;
+  }
+  
+  /* Allinea i loghi in due righe da due */
+  .footer-greenbar img:nth-child(odd) {
+    justify-self: end;
+    margin-right: 0.5rem;
+  }
+  
+  .footer-greenbar img:nth-child(even) {
+    justify-self: start;
+    margin-left: 0.5rem;
   }
 }
