@@ -43,9 +43,10 @@
 </head>
 <body>
   <header>
+    <button class="menu-toggle" aria-label="Menu">☰</button>
     <img src="assets/fit4medrob.png" alt="Fit4MedRob Logo" class="logo">
     <img src="assets/icsr25.png" alt="ICSR 2025 Logo" class="logo" style="height:42px; margin-right:2rem; background:#fff; border-radius:6px; padding:3px 8px;">
-    <nav>
+    <nav id="main-nav">
       <a href="index.html">Home</a>
       <a href="program.html" class="active">Program</a>
       <a href="instructions.html">Instruction for Authors</a>
@@ -67,5 +68,22 @@
       <img src="assets/csm_logo_FIT4MEDROB_footer_uniformato_258215c4be.png" alt="Fit4MedRob" title="Fit4MedRob">
     </div>
   </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const nav = document.querySelector('#main-nav');
+      
+      menuToggle.addEventListener('click', function() {
+        nav.classList.toggle('active');
+      });
+      
+      // Chiudi il menu quando si clicca su un link
+      document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('active');
+        });
+      });
+    });
+  </script>
 </body>
 </html>
