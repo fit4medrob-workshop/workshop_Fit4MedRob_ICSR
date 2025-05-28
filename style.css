@@ -166,13 +166,51 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.7rem 0;
-  gap: 2.5rem;
-  margin-top: 1.5rem;
+  padding: 1rem;
+  margin-top: 2rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Nasconde la scrollbar su Firefox */
 }
+
+/* Nasconde la scrollbar su Chrome, Safari e nuovi Edge */
+.footer-greenbar::-webkit-scrollbar {
+  display: none;
+}
+
 .footer-greenbar img {
-  height: 80px;
-  border-radius: 6px;
-  padding: 6px 16px;
+  height: 40px;
+  width: auto;
+  max-width: 120px;
   object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
+  transition: opacity 0.2s;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.footer-greenbar img:hover {
+  opacity: 1;
+}
+
+/* Stile per mobile */
+@media (max-width: 768px) {
+  .footer-greenbar {
+    justify-content: flex-start;
+    padding: 0.8rem 1rem;
+    gap: 1.5rem;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .footer-greenbar img {
+    height: 35px;
+    max-width: 100px;
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+  }
 }
