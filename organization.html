@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="assets/workshop_logo.png" />
+  <title>Organization - Fit4MedRob Workshop</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      position: relative;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url('assets/workshop_logo.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 40%;
+      opacity: 0.08;
+      z-index: -1;
+      pointer-events: none;
+    }
+    .main-title {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-top: 2rem;
+      margin-bottom: 1.5rem;
+    }
+    .organizers-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      padding: 2rem;
+    }
+    .organizer-card {
+      background-color: rgba(255, 255, 255, 0.95);
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem 2rem;
+      width: 100%;
+      max-width: 600px;
+      text-align: left;
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+    }
+    .organizer-card img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid #ccc;
+    }
+    .organizer-info h3 {
+      margin: 0;
+      font-size: 1.3rem;
+    }
+    .organizer-info p {
+      margin: 0.3rem 0;
+      font-size: 1rem;
+      color: #333;
+    }
+    .organizer-info a {
+      color: #0077cc;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    .organizer-info a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="assets/fit4medrob.png" alt="Fit4MedRob Logo" class="logo" />
+    <img src="assets/icsr25.png" alt="ICSR 2025 Logo" class="logo" style="height:42px; margin-right:2rem; background:#fff; border-radius:6px; padding:3px 8px;" />
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="program.html">Program</a>
+      <a href="instructions.html">Instructions for Authors</a>
+      <a href="organization.html" class="active">Organization</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="main-title">Organizing Committee</h1>
+    <div class="organizers-container">
+
+      <div class="organizer-card">
+        <img src="organizers/andreaorlandini.jpg" alt="Andrea Orlandini" />
+        <div class="organizer-info">
+          <h3>Andrea Orlandini</h3>
+          <p>Institute of Cognitive Sciences and Technologies (ISTC)</p>
+          <p>National Research Council of Italy (CNR)</p>
+          <p><a href="mailto:andrea.orlandini@cnr.it">andrea.orlandini@cnr.it</a></p>
+          <p><a href="https://www.istc.cnr.it/people/andrea-orlandini" target="_blank">Institutional Page</a></p>
+        </div>
+      </div>
+
+      <div class="organizer-card">
+        <img src="organizers/christiantamantini.jpg" alt="Christian Tamantini" />
+        <div class="organizer-info">
+          <h3>Christian Tamantini</h3>
+          <p>Institute of Cognitive Sciences and Technologies (ISTC)</p>
+          <p>National Research Council of Italy (CNR)</p>
+          <p><a href="mailto:christian.tamantini@cnr.it">christian.tamantini@cnr.it</a></p>
+          <p><a href="https://www.istc.cnr.it/people/christian-tamantini/" target="_blank">Institutional Page</a></p>
+        </div>
+      </div>
+
+      <div class="organizer-card">
+        <img src="organizers/Silvia-Rossi.jpg" alt="Silvia Rossi" />
+        <div class="organizer-info">
+          <h3>Silvia Rossi</h3>
+          <p>Department of Electrical Engineering and Information Technology</p>
+          <p>University of Naples Federico II</p>
+          <p><a href="mailto:silvia.rossi@unina.it">silvia.rossi@unina.it</a></p>
+          <p><a href="https://www.docenti.unina.it/silvia.rossi" target="_blank">Institutional Page</a></p>
+        </div>
+      </div>
+
+      <div class="organizer-card">
+        <img src="organizers/Luigi-Darco.png" alt="Luigi D’Arco" />
+        <div class="organizer-info">
+          <h3>Luigi D’Arco</h3>
+          <p>Department of Electrical Engineering and Information Technology</p>
+          <p>University of Naples Federico II</p>
+          <p><a href="mailto:luigi.darco@unina.it">luigi.darco@unina.it</a></p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    Workshop on Social Robotics for Human-Centered Assistive and Rehabilitation AI 2025 &mdash; Fit4MedRob event
+    <div class="footer-greenbar">
+      <img src="assets/csm_logo_MinisterUR_footer_uniformato_79ee9aff05.png" alt="Ministero Università e Ricerca" title="Ministero Università e Ricerca">
+      <img src="assets/csm_logo_ItaliaDomani_footer_uniformato_e3479bff07.png" alt="Italia Domani" title="Italia Domani">
+      <img src="assets/csm_logo_PNC_footer_uniformato_37dd4f6b7d.png" alt="PNC" title="PNC">
+      <img src="assets/csm_logo_FIT4MEDROB_footer_uniformato_258215c4be.png" alt="Fit4MedRob" title="Fit4MedRob">
+    </div>
+  </footer>
+</body>
+</html>
