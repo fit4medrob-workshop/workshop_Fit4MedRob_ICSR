@@ -71,23 +71,31 @@ footer {
   border-top: 1px solid #e0e0e0;
 }
 
-/* Menu Mobile */
+/* Contenitore loghi */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-grow: 1;
+}
+
+/* Menu Desktop */
+#main-nav {
+  display: flex;
+  gap: 1.5rem;
+  margin-left: auto; /* Spinge il menu a destra */
+}
+
+/* Pulsante menu mobile */
 .menu-toggle {
-  display: none;
+  display: none; /* Nascosto di default */
   background: none;
   border: none;
   font-size: 1.8rem;
   cursor: pointer;
   padding: 0.5rem;
-  margin-left: auto;
+  margin-left: 1rem;
   color: #333;
-  order: 3; /* Sposta il pulsante a destra */
-}
-
-/* Menu a tendina */
-#main-nav {
-  display: flex;
-  gap: 1.5rem;
 }
 
 /* Stile per mobile */
@@ -96,50 +104,60 @@ footer {
     padding: 0.5rem 1rem;
     display: flex;
     align-items: center;
-    flex-wrap: nowrap;
+    position: relative;
   }
   
-  .menu-toggle {
-    display: block;
-  }
-  
+  /* Nascondi il menu normale su mobile */
   #main-nav {
-    position: fixed;
-    top: 70px;
-    right: 10px;
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
     background: #fff;
     flex-direction: column;
-    padding: 0.5rem 0;
-    border-radius: 4px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
-    transform: scale(0);
-    transform-origin: top right;
-    transition: transform 0.2s ease-in-out;
-    z-index: 1000;
     min-width: 200px;
-    display: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    z-index: 1000;
   }
   
+  /* Mostra il menu quando attivo */
   #main-nav.active {
-    transform: scale(1);
     display: flex;
   }
   
+  /* Stile dei link del menu */
   #main-nav a {
-    padding: 0.8rem 1.5rem;
-    text-align: left;
-    white-space: nowrap;
+    padding: 1rem 1.5rem;
     color: #333;
     text-decoration: none;
+    text-align: left;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  #main-nav a:last-child {
+    border-bottom: none;
   }
   
   #main-nav a:hover {
-    background-color: #f5f5f5;
+    background-color: #f8f8f8;
   }
   
+  /* Mostra il pulsante menu su mobile */
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+  }
+  
+  /* Regola le dimensioni dei loghi su mobile */
   .logo {
     height: 36px;
-    margin-right: 1rem;
+  }
+  
+  /* Assicura che il pulsante menu sia sempre visibile */
+  .menu-toggle {
+    z-index: 1001;
   }
 }
 
