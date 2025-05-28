@@ -173,14 +173,15 @@ footer {
 }
 
 .footer-greenbar img {
-  height: 40px;
+  height: 70px;
   width: auto;
-  max-width: 140px;
+  max-width: 220px;
   object-fit: contain;
   opacity: 0.9;
   transition: opacity 0.2s;
   display: inline-block;
   vertical-align: middle;
+  margin: 0 15px;
 }
 
 .footer-greenbar img:hover {
@@ -198,9 +199,9 @@ footer {
   }
   
   .footer-greenbar img {
-    height: 35px;
-    max-width: 120px;
-    margin: 0 auto;
+    height: 50px;
+    max-width: 180px;
+    margin: 10px auto;
   }
   
   /* Allinea i loghi in due righe da due */
