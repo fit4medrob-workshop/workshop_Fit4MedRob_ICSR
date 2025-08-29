@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -87,7 +88,7 @@
       padding-bottom: 0;
     }
     .paper h3 {
-      color: var(--secondary-blue); /* Using the site's secondary blue for time slots */
+      color: var(--secondary-blue);
       margin: 0 0 0.5rem 0;
       font-size: 1rem;
     }
@@ -101,10 +102,28 @@
       margin: 0.25rem 0 0 0;
     }
     .speaker {
-      color: var(--primary-blue); /* Using the site's primary blue for speaker names */
+      color: var(--primary-blue);
       font-weight: 500;
       margin: 0.5rem 0 1rem 0;
     }
+
+    /* --- Speaker layout --- */
+    .speaker-info {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      margin-top: 15px;
+    }
+    .speaker-photo img {
+      max-width: 180px;
+      height: auto;
+      border-radius: 10px;
+    }
+    .speaker-bio {
+      flex: 1;
+      text-align: justify;
+    }
+
     @media (max-width: 768px) {
       .program-block {
         flex-direction: column;
@@ -112,6 +131,14 @@
       .time {
         min-width: 100%;
         padding: 1rem;
+      }
+      .speaker-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .speaker-bio {
+        text-align: left;
       }
     }
   </style>
@@ -133,7 +160,7 @@
   </header>
   
   <main class="program-container">
-    <h1 class="main-title">Workshop Program (Tentative)</h1>
+    <h1 class="main-title">Workshop Program</h1>
   
     <!-- Introduction -->
     <section class="program-block">
@@ -143,14 +170,38 @@
       </div>
     </section>
 
-<!-- Keynote -->
-<section class="program-block">
-  <div class="time">11:00 - 12:00</div>
-  <div class="content">
-    <h2>Keynote Speaker</h2>
-    <p class="speaker">To Be Announced</p>
-  </div>
-</section>
+    <!-- Keynote -->
+    <section class="program-block keynote">
+      <div class="time">11:00 - 12:00</div>
+      <div class="content">
+        <h2>Keynote Speaker: Prof. Ho Seok AHN</h2>
+        <h3 class="talk-title">"Robots come to us"</h3>
+        
+        <div class="speaker-info">
+          <!-- Foto relatore -->
+          <div class="speaker-photo">
+            <img src="assets/speaker.jpg" alt="Foto di Prof. Ho Seok AHN">
+          </div>
+
+          <!-- Short bio -->
+          <div class="speaker-bio">
+            <p>
+              Ho Seok AHN is a senior lecturer, which is equivalent to Associate Professor at major universities abroad, 
+              at the Department of Electrical, Computer and Software Engineering, University of Auckland, New Zealand, since 2015. 
+              He received his B.S. degree in Information and Communication Engineering from Sungkyunkwan University, Republic of Korea, 
+              and his Ph.D. degree in Electrical Engineering and Computer science from Seoul National University, Republic of Korea, 
+              in 2005 and 2010, respectively. He was a senior researcher at Korea Institute of Industrial Technology (KITECH), 
+              Republic of Korea, from 2010 to 2012. He was a lecturer at University of Science & Technology (UST), Republic of Korea, 
+              from 2011 to 2012. He was a research scientist at Intelligent Robotics and Communication Laboratories, Department of Ambient Intelligence, 
+              Advanced Telecommunications Research Institute International (ATR), Japan, from 2012 to 2013. His research interests include social robots, 
+              cultural robots, Human-Robot Interaction, affective computing, artificial emotional systems, healthcare robots, intelligent interactive systems, 
+              facial robots, android robots, humanoid robots, intelligent service robots, and modular robot systems.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
 <!-- Session A -->
 <section class="program-block">
